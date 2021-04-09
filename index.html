@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+<html >
+    <head>
+        <title>Currency Converter</title>
+        <style>
+          body{
+            background-color: gray;
+            background-image: url(img/pic1.jpg);
+
+          }
+          input{
+            width: 300px;
+          }
+         
+        </style>
+        <script>
+            function converter()
+            {
+            var dollar = parseInt(document.getElementById('dollar').value);
+            var convert = document.getElementById('convert').value;
+            var cv = document.getElementById('cv12');
+            if(convert == 1){
+                cv.value = dollar * 84.67;
+              cv.type = "text";
+            }
+            if(convert == 2){
+                cv.value = dollar * 64.35;
+              cv.type = "text";
+            }
+            if(convert == 3){
+                cv.value = dollar * 0.82;
+              cv.type = "text";
+            }
+            if(convert == 4){
+                cv.value = dollar * 0.72;
+              cv.type = "text";
+            }
+          }
+        </script>
+<head>
+    <body>
+      
+        <h1 style="text-align: center; font-size: 50px;"><i>Currency Converter</i></h1><br>
+      <div style="margin-left: 500px;">
+        <form action="#" method="post" name="cc">
+         <h2><b>USD:</h2></b> <input style="height: 20px; width: 300px;" id="dollar" type="text" name="dollar" placeholder="Enter Your Amount" ><br><br>
+         <h2><b>Convert to:</h2></b> <select name="convert" id ="convert"><br>
+           <option value="0">Select the Currency</option>
+           <option value="1">BDT</option>
+           <option value="2">INR</option>
+           <option value="3">EURO</option>
+           <option value="4">POUNDS</option>
+         </select><br><br>
+         <input style="height: 20px; width: 300px;" type="button" name="submit" value="Convert" onclick="converter()"><br><br>
+       </form>
+       <h2>Converted Value:</h2>
+       <input style="height: 20px; width: 300px;" type="show" placeholder="Show Converted Amount" name="cv" id="cv12" readonly />
+      </div>
+
+    </body>
+<html>
